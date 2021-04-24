@@ -1,0 +1,213 @@
+*   {
+    margin:0px;
+    padding: 0px;
+}
+/*creando el modo claro*/
+body.modoClaro {
+    --colorFondo: #EEEEEE;
+    --color: #424242;
+    --fondoMain: #424242;
+    --colorHeader: #E0E0E0;
+  }
+
+  body.modoOscuro{
+    --colorFondo: #30343f ;
+     --color: rgb(220, 237, 255);
+     --aside:#252935;
+     --colorHeader: #191e2b;
+ }
+
+
+
+
+.contenido{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 750px;
+    background-color: var(--colorFondo);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:var(--colorHeader);
+    width: 100%;
+   
+}
+.title{
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px;
+    font-size: 25px;
+    color: var(--color);
+}
+.barra{
+    display: flex;
+    flex-direction: row;
+
+    
+}
+.imagen{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    
+}
+.texto{
+    display: flex;
+    flex-direction: row; 
+    margin: 10px;
+}
+.oscuro{
+    display: flex;
+    flex-direction: row; 
+    margin: 10px;
+}
+a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: black;
+}
+.text-image{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: aliceblue;
+    background-color: #191e2b;
+    text-decoration: none;
+    margin-right: 5px;
+    display: block;
+
+}
+
+
+.top    {
+    height: 100px;
+    width: 500px;
+    background-color: white;
+    margin-top: 10px;
+}
+.bottom {
+    height: 100px;
+    width: 500px;
+    background-color: white;
+}
+#im{
+    background-color: black;
+    height: 300px;
+    width: 500px;
+}
+.middle-text    {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+aside   {
+    width: 30%;
+    background-color: var(--aside);
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+.aside-title    {
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: var(--color);
+}
+.forms  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: green; */
+    padding: 10px;
+    width: 200px;
+    margin-top: 30px;
+}
+
+.url-input  {
+    width: 100%;
+  
+}
+
+.style-color    {
+    margin-top: 30px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.fondo-container    {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background-color: red; */
+    
+    
+}
+.fondo  {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--color);
+}
+label{
+    color: var(--color);
+}
+.color-box  {
+    padding: 10px;
+
+}
+
+.options    {
+padding: 10px;
+}
+
+.filtros    {
+    /* background-color: chocolate; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 20px;
+}
+
+.filtros-div   {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-top: 0px;
+    width: 150px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 40px;
+    overflow: hidden;
+    font-size: 15px;
+}
+
+#download-meme-button {
+    margin-top: 30px;
+    padding: 15px 15px;
+    height: auto;
+    background-color: #2e7d32;
+    color: white;
+}
+#download-meme-button:hover, #download-meme-button:focus {
+    background-color: #1b5e20;
+}
+.ocultar{
+    display: none;
+}
