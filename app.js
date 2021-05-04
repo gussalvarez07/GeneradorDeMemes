@@ -1,3 +1,10 @@
+function saludar () {
+  // código que se ejecuta después de que se cargó el documento
+console.log('hola mundo!');
+}
+
+
+
 //Modo oscuro y claro
       const boton = document.getElementById('boton');
       const textInfo = document.getElementById('textInfo');
@@ -42,9 +49,42 @@ descarga.addEventListener("click", () => {
 //link para mostrar imagen en el background
 let cambiarImg = document.getElementById("url-img");
 function  imagenUrl() {
-document.getElementById("im").style.backgroundImage = cambiarImg.value;}
+ document.getElementById("im").src = cambiarImg.value;
+ }
 
-cambiarImg.addEvenetListener('input',imagenUrl)
+cambiarImg.addEventListener('input',imagenUrl)
+
+//Color imagen div
+let color = document.getElementById("mezclador");
+  function cambiarcolor( ){
+ 
+   document.getElementById("divcolor").style.backgroundColor =`${color.value}`;
+}
+
+color.addEventListener('input', cambiarcolor)
+//fondo imagen
+
+//filtros imagen
+
+const brillo = document.getElementById ('brillo');
+/*const opacidad = document.getElementById('opacidad');
+const constraste = document.getElementById('contraste');
+const desenfoque = document.getElementById('desenfoque');
+const grises = document.getElementById('grises');
+const sepia = document.getElementById('sepia');
+const hue = document.getElementById('hue');
+const saturado = document.getElementById('saturado');
+const negativo= document.getElementById('negativo');
+*/
+const divColor = document.getElementById("divcolor");
+
+const actualizarFiltros = ()=>{
+divColor.style.filter = `brightness(${brillo.value})`;
+
+brillo.addEventListener('change', actualizarFiltros)};
 
 
-
+//restablecerFiltros.addEventListener('click',()=>{
+ // brillo.value = 1; 
+  //actualizarFiltros();
+//})
