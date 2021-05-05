@@ -66,8 +66,8 @@ color.addEventListener('input', cambiarcolor)
 
 //filtros imagen
 
-const brillo = document.getElementById ('brillo');
-/*const opacidad = document.getElementById('opacidad');
+const brillo = document.getElementById("brillo");
+const opacidad = document.getElementById('opacidad');
 const constraste = document.getElementById('contraste');
 const desenfoque = document.getElementById('desenfoque');
 const grises = document.getElementById('grises');
@@ -75,16 +75,46 @@ const sepia = document.getElementById('sepia');
 const hue = document.getElementById('hue');
 const saturado = document.getElementById('saturado');
 const negativo= document.getElementById('negativo');
-*/
+
 const divColor = document.getElementById("divcolor");
 
-const actualizarFiltros = ()=>{
-divColor.style.filter = `brightness(${brillo.value})`;
+const actualizarFiltros = (e) => {
+  console.log(e.target.value); 
+  divColor.style.filter = `brightness(${e.target.value}) opacity(${opacidad.value}) contrast(${constraste.value}%)  grayscale(${grises.value}%) sepia(${sepia.value}) hue-rotate(${hue.value}deg)`;
+};
 
-brillo.addEventListener('change', actualizarFiltros)};
+brillo.addEventListener("change", actualizarFiltros);
+opacidad.addEventListener("change", actualizarFiltros);
+constraste.addEventListener("change", actualizarFiltros);
+//desenfoque.addEventListener("change", actualizarFiltros);
+grises.addEventListener("change", actualizarFiltros);
+sepia.addEventListener("change", actualizarFiltros);
+hue.addEventListener("change", actualizarFiltros);
+saturado.addEventListener("change", actualizarFiltros);
+negativo.addEventListener("change", actualizarFiltros);
+
+
+
+
 
 
 //restablecerFiltros.addEventListener('click',()=>{
  // brillo.value = 1; 
   //actualizarFiltros();
 //})
+
+
+//Agregar textos 
+const topText = document.querySelector(".topText");
+const bottomText = document.querySelector(".bottomText");
+const topTextEdit = document.querySelector("#topTextEdit");
+const bottomTextEdit = document.querySelector("#bottomTextEdit");
+
+
+topTextEdit.addEventListener("input", () =>{
+  topText.innerText = topTextEdit.value;
+});
+
+bottomTextEdit.addEventListener("input", () =>{
+  bottomText.innerText = bottomTextEdit.value;
+});
