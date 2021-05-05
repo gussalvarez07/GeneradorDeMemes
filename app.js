@@ -64,6 +64,7 @@ let color = document.getElementById("mezclador");
 color.addEventListener('input', cambiarcolor)
 //fondo imagen
 
+
 //filtros imagen
 
 const brillo = document.getElementById("brillo");
@@ -80,17 +81,17 @@ const divColor = document.getElementById("divcolor");
 
 const actualizarFiltros = (e) => {
   console.log(e.target.value); 
-  divColor.style.filter = `brightness(${e.target.value}) opacity(${opacidad.value}) contrast(${constraste.value}%)  grayscale(${grises.value}%) sepia(${sepia.value}) hue-rotate(${hue.value}deg)`;
+  divColor.style.filter = `brightness(${e.target.value}) opacity(${opacidad.value}) contrast(${constraste.value}%) blur(${desenfoque.value}px) grayscale(${grises.value}%) sepia(${sepia.value}) hue-rotate(${hue.value}deg) `;
 };
-
+//NO ME LEE DESENFOCAR, SATURADO NI NEGATIVO
 brillo.addEventListener("change", actualizarFiltros);
 opacidad.addEventListener("change", actualizarFiltros);
 constraste.addEventListener("change", actualizarFiltros);
-//desenfoque.addEventListener("change", actualizarFiltros);
+desenfoque.addEventListener("change", actualizarFiltros);
 grises.addEventListener("change", actualizarFiltros);
 sepia.addEventListener("change", actualizarFiltros);
 hue.addEventListener("change", actualizarFiltros);
-saturado.addEventListener("change", actualizarFiltros);
+//saturado.addEventListener("change", actualizarFiltros);
 negativo.addEventListener("change", actualizarFiltros);
 
 
@@ -105,10 +106,10 @@ negativo.addEventListener("change", actualizarFiltros);
 
 
 //Agregar textos 
-const topText = document.querySelector(".topText");
-const bottomText = document.querySelector(".bottomText");
-const topTextEdit = document.querySelector("#topTextEdit");
-const bottomTextEdit = document.querySelector("#bottomTextEdit");
+const topText = document.querySelector(".title-superior");
+const bottomText = document.querySelector(".title-inferior");
+const topTextEdit = document.querySelector(".topTextEdit");
+const bottomTextEdit = document.querySelector(".bottomTextEdit");
 
 
 topTextEdit.addEventListener("input", () =>{
@@ -118,3 +119,30 @@ topTextEdit.addEventListener("input", () =>{
 bottomTextEdit.addEventListener("input", () =>{
   bottomText.innerText = bottomTextEdit.value;
 });
+//
+const checkboxSup = document.querySelector("#no-top-text-checkbox")
+const checkboxInf = document.querySelector("#no-bottom-text-checkbox")
+
+
+checkboxSup.addEventListener('change',() =>{
+  if(checkboxSup.checked){
+topText.classList.add("ocultar");
+topTextEdit.disabled = true;
+  }else{
+    topTitle.classList.remove("ocultar");
+    topTextEdit.disabled = false;
+  }
+  
+})
+
+
+checkboxInf.addEventListener('change',() =>{
+  if(checkboxInf.checked){
+bottomText.classList.add("ocultar");
+bottomTextEdit.disabled = true;
+  }else{
+    bottomText.classList.remove("ocultar");
+    bottomTextEdit.disabled = false;
+  }
+  
+})
