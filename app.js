@@ -67,6 +67,7 @@ color.addEventListener('input', cambiarcolor)
 
 //filtros imagen
 
+
 const brillo = document.getElementById("brillo");
 const opacidad = document.getElementById('opacidad');
 const constraste = document.getElementById('contraste');
@@ -74,16 +75,16 @@ const desenfoque = document.getElementById('desenfoque');
 const grises = document.getElementById('grises');
 const sepia = document.getElementById('sepia');
 const hue = document.getElementById('hue');
-const saturado = document.getElementById('saturado');
 const negativo= document.getElementById('negativo');
+const saturado= document.getElementById('saturado');
 
 const divColor = document.getElementById("divcolor");
+const reestablecerFiltros = document.querySelector('#reestablecerFiltros');
 
 const actualizarFiltros = (e) => {
-  console.log(e.target.value); 
-  divColor.style.filter = `brightness(${e.target.value}) opacity(${opacidad.value}) contrast(${constraste.value}%) blur(${desenfoque.value}px) grayscale(${grises.value}%) sepia(${sepia.value}) hue-rotate(${hue.value}deg) `;
+  divColor.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${constraste.value}%) blur(${desenfoque.value}px) grayscale(${grises.value}%) sepia(${sepia.value}) hue-rotate(${hue.value}deg) saturate(${saturado.value}%) invert(${negativo.value})`;
 };
-//NO ME LEE DESENFOCAR, SATURADO NI NEGATIVO
+
 brillo.addEventListener("change", actualizarFiltros);
 opacidad.addEventListener("change", actualizarFiltros);
 constraste.addEventListener("change", actualizarFiltros);
@@ -91,18 +92,26 @@ desenfoque.addEventListener("change", actualizarFiltros);
 grises.addEventListener("change", actualizarFiltros);
 sepia.addEventListener("change", actualizarFiltros);
 hue.addEventListener("change", actualizarFiltros);
-//saturado.addEventListener("change", actualizarFiltros);
 negativo.addEventListener("change", actualizarFiltros);
+saturado.addEventListener("change", actualizarFiltros);
 
 
 
+reestablecerFiltros.addEventListener('click', () =>{
+  brillo.value = 1;
+  opacidad.value = 1;
+  contraste.value = 100;
+  desenfoque.value = 0;
+  grises.value = 0;
+  sepia.value = 0;
+  hue.value = 0;
+  saturado.value = 100;
+  negativo.value = 0;
+  actualizarFiltros();
+});
 
 
 
-//restablecerFiltros.addEventListener('click',()=>{
- // brillo.value = 1; 
-  //actualizarFiltros();
-//})
 
 
 //Agregar textos 
@@ -146,3 +155,61 @@ bottomTextEdit.disabled = true;
   }
   
 })
+
+//Tamanio dl texto
+
+const textoTamanio = document.querySelector("#text-size-input")
+
+textoTamanio.addEventListener("change", () =>{
+  topText.style.fontSize = `${textoTamanio.value}px`;
+  bottomText.style.fontSize = `${textoTamanio.value}px`;
+})
+// Texto alineado
+// Align text
+const alignLeft = document.querySelector(".alignLeft");
+const alignCenter = document.querySelector(".alignCenter");
+const alignRight = document.querySelector(".alignRight");
+
+alignLeft.addEventListener("click",() =>{
+  topText.style.textAlign = `left`;
+  bottomText.style.textAlign = `left`;
+});
+alignCenter.addEventListener("click",() =>{
+  topText.style.textAlign = `center`;
+  bottomText.style.textAlign = `center`;
+});
+alignRight.addEventListener("click",() =>{
+  topText.style.textAlign = `right`;
+  bottomText.style.textAlign = `right`;
+});
+
+//Color fuente
+const textoColor = document.querySelector("#text-color-input")
+
+textoColor.addEventListener("change", () => {
+  topText.style.color = textoColor.value;
+  bottomText.style.color = textoColor.value;
+})
+//Color fondo
+const fondoColor = document.querySelector("#text-background-color-input")
+const divsuperior = document.querySelector(".top")
+const divinferior = document.querySelector(".bottom")
+
+fondoColor.addEventListener("input", () => {
+  divsuperior.style.backgroundColor = fondoColor.value;
+  divinferior.style.backgroundColor = fondoColor.value;
+
+});
+
+// Fondo transparente
+const checkboxBackground = document.querySelector("#text-no-background-checkbox");
+checkboxBackground.addEventListener("change", () => {
+  if(checkboxBackground.checked){
+    divsuperior.style.backgroundColor = 'transparent'
+    divinferior.style.backgroundColor = 'transparent'
+  }else{
+    divsuperior.style.backgroundColor = fondoColor.value;
+    divinferior.style.backgroundColor = fondoColor.value;
+  }
+});
+

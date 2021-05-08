@@ -36,7 +36,7 @@
             </header>
 
             <div class="middle">
-                <div class="box">
+               <!-- <div class="box"> -->
                     <div class="top">
                         <p class="title-superior">TOP TEXT</p>
                     </div>
@@ -49,7 +49,7 @@
 
                     </div>
 
-                </div>
+               <!-- </div>-->
 
             </div>
             <button type="button" class="button button-text" id="download-meme-button" >Descargar
@@ -90,58 +90,55 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="filtros">
 
-                    <div class="filtros-div">
-                        <label for="brillo">Brillo</label>
-                        <input type="range" id="brillo" min="0" max="1" step="0.1" value="1">
-                   </div>
+                  <div class="filtros-div">
+                      <label for="brillo">Brillo</label>
+                      <input type="range" id="brillo" min="0" max="1" step="0.1" value="1">
+                 </div>
 
-                   <div class="filtros-div">
-                       <label for="Opacidad">Opacidad</label>
-                       <input type="range" id="opacidad" min="0" max="1" step="0.1" value="1">
-                   </div>
-                
-                   <div class="filtros-div">
-                       <label for="Contraste">Contraste</label>
-                       <input type="range" id="contraste" min="100%" max="1000%" step="1" value="100%">
-                    </div>
+                 <div class="filtros-div">
+                     <label for="Opacidad">Opacidad</label>
+                     <input type="range" id="opacidad" min="0" max="1" step="0.1" value="1">
+                 </div>
+              
+                 <div class="filtros-div">
+                     <label for="Contraste">Contraste</label>
+                     <input type="range" id="contraste" min="100" max="1000" step="1" value="100">
+                  </div>
 
-                    <div class="filtros-div">
-                       <label for="Desenfoque">Desenfoque</label>
-                       <input type="range" id="desenfoque" min="0px" max="10px" step="0.1px" value="0px">
-                    </div>
+                  <div class="filtros-div">
+                     <label for="Desenfoque">Desenfoque</label>
+                     <input type="range" id="desenfoque" min="0" max="10" step="0.1" value="0">
+                  </div>
 
-                    <div class="filtros-div">
-                       <label for="escala-de-grises">Escala de grises</label>
-                       <input type="range" id="grises" min="0%" max="100%" step="1%" value="0%">
-                    </div>
+                  <div class="filtros-div">
+                     <label for="escala-de-grises">Escala de grises</label>
+                     <input type="range" id="grises" min="0" max="100" step="1" value="0">
+                  </div>
 
-                    <div class="filtros-div">
-                       <label for="sepia">Sepia</label>
-                       <input type="range" id="sepia" min="0%" max="100%" step="1%" value="0%">
-                    </div>
+                  <div class="filtros-div">
+                     <label for="sepia">Sepia</label>
+                     <input type="range" id="sepia" min="0" max="100" step="1" value="0">
+                  </div>
 
-                    <div class="filtros-div">
-                       <label for="hue">Hue</label>
-                       <input type="range" id="hue" min="0deg" max="359deg" step="1deg" value="0deg">
-                    </div>
+                  <div class="filtros-div">
+                     <label for="hue">Hue</label>
+                     <input type="range" id="hue" min="0" max="359" step="1" value="0">
+                  </div>
 
-                    <div class="filtros-div">
-                       <label for="Saturado">Saturado</label>
-                       <input type="range" id="saturado " min="100%" max="1000%" step="10%" value="100%">
-                    </div>
-                    <div class="filtros-div">
-                    <label for="negativo">Negativo</label>
-                    <input type="range" id="negativo" min="0" max="1" step="0.1" value="1">
-                    </div>
-
-                </div>
-
-
-
-
+                  <div class="filtros-div">
+                    <label for="saturado">Saturado</label>
+                    <input type="range" id="saturado" min="100" max="1000" step="10" value="100">
+                 </div>
+                  
+                  <div class="filtros-div">
+                  <label for="negativo">Negativo</label>
+                  <input type="range" id="negativo" min="0" max="1" step="0.1" value="0">
+                  </div>
+                  <button id="reestablecerFiltros">Reestablecer filtros</button>
+              </div>
+                     
             </div>
         </section>
             <section id="aside-title" class="ocultar">
@@ -189,9 +186,9 @@
                             Alineaci´ón
                           -->
                           <div class="buttons-container buttons-alignment">
-                            <button class="button button-default" id="text-left-align-button" aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
-                            <button class="button button-default" id="text-center-align-button" aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
-                            <button class="button button-default" id="text-right-align-button" aria-label="Alineat texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
+                            <button class="alignLeft" id="text-left-align-button" aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                            <button class="alignCenter" id="text-center-align-button" aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                            <button class="alignRight" id="text-right-align-button" aria-label="Alineat texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
                           </div>
                         </div>
                       </div>
