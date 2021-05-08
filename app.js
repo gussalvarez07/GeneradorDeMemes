@@ -213,3 +213,37 @@ checkboxBackground.addEventListener("change", () => {
   }
 });
 
+//Contorno text panel
+const contornoNone = document.getElementById ('contorno-none');
+const contornoClaro = document.getElementById ('contorno-claro');
+const contornoOscuro = document.getElementById ('contorno-oscuro');
+
+
+contornoNone.addEventListener ('click', () =>{
+    topText.style.textShadow = "none";
+   bottomText.style.textShadow = "none";
+});
+
+contornoClaro.addEventListener ('click', () =>{
+    topText.style.textShadow = "rgb(255 255 255) 2px 2px, rgb(255 255 255) -2px 2px, rgb(255 255 255) 2px -2px, rgb(255 255 255) -2px -2px";
+  bottomText.style.textShadow = "rgb(255 255 255) 2px 2px, rgb(255 255 255) -2px 2px, rgb(255 255 255) 2px -2px, rgb(255 255 255) -2px -2px";
+});
+
+contornoOscuro.addEventListener ('click', ()=>{
+    topText.style.textShadow = "rgb(0 0 0) 2px 2px, rgb(0 0 0) -2px 2px, rgb(0 0 0) 2px -2px, rgb(0 0 0) -2px -2px";
+    bottomText.style.textShadow = "rgb(0 0 0) 2px 2px, rgb(0 0 0) -2px 2px, rgb(0 0 0) 2px -2px, rgb(0 0 0) -1px -2px";
+});
+
+//Espaciado panel texto
+espaciado.addEventListener('input', ()=>{
+    topText.style.padding = espaciado.value + 'px';
+    bottomText.style.padding = espaciado.value + 'px';
+  })
+
+  //interlineado
+  const interlineado = document.getElementById('interlineado');
+
+interlineado.addEventListener('input', ()=>{
+    topText.style.lineHeight = interlineado.value;
+    bottomText.style.lineHeight = interlineado.value;
+})
