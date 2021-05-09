@@ -12,10 +12,10 @@ console.log('hola mundo!');
       boton.addEventListener("click",()=>{
           body.classList.toggle("modoClaro");
           body.classList.toggle("modoOscuro");
-          if(textInfo.textContent == "Modo Oscuro"){
-            textInfo.textContent = "Modo Claro";
-          }else{
+          if(textInfo.textContent == "Modo Claro"){
             textInfo.textContent = "Modo Oscuro";
+          }else{
+            textInfo.textContent = "Modo Claro";
           }
       })
    //panel imagen - texto
@@ -247,3 +247,12 @@ interlineado.addEventListener('input', ()=>{
     topText.style.lineHeight = interlineado.value;
     bottomText.style.lineHeight = interlineado.value;
 })
+
+//tipos de letras
+const fuentes = document.getElementById('fuentesTexto');
+
+fuentes.addEventListener ('input',()=>{
+    topText.style.fontFamily = fuentesTexto.value;
+    bottomText.style.fontFamily = fuentesTexto.value;
+});
+
