@@ -1,0 +1,450 @@
+body{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* MODO OSCURO */
+ 
+/* Estableciendo variables */
+.cambiar-modo-oscuro{
+    --header: #191e2b;
+    --white: #ffffff;
+    --greylight: #30343f;
+    --aside: #252935;
+    --letra: #DCEDFF;
+}
+
+.cambiar-modo-claro{
+    --header: #E0E0E0;
+    --div: #9e9e9e;
+    --aside: #ffffff;
+    --letra: #424242;
+    --greylight: #EEEEEE;
+    --white: #424242;
+}
+
+
+/* Estableciendo propiedades a las pestañas */
+.cambiar-modo-claro .button-claro,
+.cambiar-modo-oscuro .button-nocturno{
+  display: flex;
+}
+
+.cambiar-modo-claro .button-claro,
+.cambiar-modo-oscuro     .button-nocturno{ 
+  display: none;
+}
+
+
+/* ESTILOS AL PROYECTO */
+
+
+.container-global{     
+    width: 100%;
+}
+
+/* ESTILOS AL HEADER */
+.box-inicial {
+    background-color:var(--header);
+    display: flex;
+    text-align:center;
+    flex-direction: column;
+}
+
+.tittle-aside{
+    color: var(--letra);
+    margin: 5px;
+}
+
+.tittle-generador {
+    font-family: 'Yusei Magic', sans-serif;
+    color: var(--letra);
+}
+
+
+.button-image{
+
+    background-color: var(--header);
+    color: var(--white);
+}
+
+.button-text{
+    background-color: var(--header);
+    color: var(--white);
+}
+
+.button-claro{
+    background-color: var(--header);
+    color: var(--white);
+}
+
+.button-nocturno{
+    background-color: var(--header);
+    color: var(--white);
+    border: none;
+}
+
+
+.button-image, .button-text, .button-nocturno, .button-claro{
+    width: max-content;
+    margin: 10px;   
+    border: none;
+
+}
+
+
+/************CONTAINER DE IMAGEN-URL********************/
+.containerTextTopBottonText{
+    background-color: var(--greylight);
+    height: 100%;
+} 
+
+.div-container{
+    width: 40vw;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.p-texto-superior, .p-texto-inferior{
+    background-color: var(--white);
+    margin: 0px;
+    padding: 5px;
+    text-align: center;
+}
+
+.imagen-meme{
+    width: 40vw;
+    height: 300px;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ESTILOS PESTAÑA IMAGEN */
+.section-image{
+    background-color: var (var(--section-image));
+}
+
+
+.p-text-botton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    height: 8vh;
+    margin: 0px;
+}
+
+.tittle-two{
+    background-color: burlywood;
+}
+
+.button-descargar{
+    width: fit-content;
+    margin-top: 20px;
+    padding: 15px;
+    margin-left: 35%;
+    background-color: var(--aside);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--letra);
+    border: 0px;
+    cursor: pointer;
+}
+
+/* *****************ASIDE****************** */
+#icon-cruz{
+    margin: 10px;
+    color: var(--letra);
+    display: none;
+}
+.box-aside{
+    justify-content: center;
+}
+
+.div-aside{
+    width: 20%;
+    background-color: var(--aside);
+    /* height: 100%; */
+}
+
+.tittle-aside{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.tittle-box-aside{
+    margin: auto;
+    padding: 5px;
+    font-size: 20px;
+    color: var(--letra);
+    
+}
+
+.panel-control-input{
+    margin: 5px;
+    width: 90%;
+    height: 23px;
+}
+
+.box-aside-color-select{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.panel-control-column{
+    width: 80%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.box-aside-filtros{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 20px;
+    color: var(--letra);
+}
+
+.button-filtro{
+    text-align: center; 
+    padding: 5px; 
+    margin: 10px;
+    margin-bottom: 15px; 
+}
+
+.restablecer-filtros{
+    background-color: var(--greylight);
+    font-family: cursive;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 4px;
+    color: var(--letra);
+
+}
+
+
+
+/* PARA REDONDEAR EL INPUT COLOR */
+.color-ffff > input[type='color']::-webkit-color-swatch-wrapper{
+        display: flex;
+        height: 36px;
+        border-radius: 5px;
+        padding: 8px 10px;
+        display: flex;
+        box-sizing: border-box;
+      }
+
+.color-ffff > input[type='color']::-webkit-color-swatch {
+        width: 18px;
+        max-width: 18px;
+        margin: 0;
+      }
+.color-ffff > input[type='color'] {
+        height: fit-content;
+        width: 100%;
+        padding: 0px;
+      }
+
+.color-ffff {
+        position: relative;
+        height: 30px;
+        display: flex;
+        background-color: #393e49;
+        border-radius: 5px;
+        cursor: pointer;
+        align-items: center;
+        padding-right: 5px;
+}
+
+.color-ffff {
+        position: relative;
+        height: 30px;
+        display: flex;
+        width: calc(50% - 5px);
+        margin-bottom: 12px;
+}
+
+/******************ESTILOS PARA PESTAÑA TEXTO***********************/
+
+.box-texto{
+    flex-direction: column;
+}
+
+.section-texto{
+    background-color: var(--section-texto);
+    display: none;
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.title-texto{
+    font-size: 25px;
+    text-align: center;
+    margin: 0px;
+    color: var(--letra);
+}
+
+.texta-text{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    height: 15px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.box-article-text{
+    margin-top: 8px;
+    font-size: 20px;
+    color: var(--letra);
+}
+
+.box-texto{
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox-text{
+    flex-direction: column;
+    font-size: 10px;
+}
+
+/* Fuentes */
+
+.h3-aside-texto{
+    text-align: center;
+    color: var(--letra);
+    margin: 0px;
+}
+
+.title-fuente{
+    text-align: center;
+    color: var(--letra);
+    margin: 0px;
+}
+
+.fuentes-texto{
+    width: 40%;
+    margin-right: 10px;
+    margin-right: 10px;
+}
+
+.font-size{
+    width: 25%;
+    margin-left: 10px;
+}
+
+/* ALINEACIÓN DE BOTONES */
+
+.botones-alineacion{
+    text-align: center;
+    margin: 10px;
+}
+
+/* COLORES */
+
+.box-colores{
+    font-size: 15px;
+    margin: 10px;
+    color: var(--letra);
+}
+
+/* CONTORNO */
+
+.box-contorno{
+    text-align: center;
+    margin: 10px;
+}
+
+/* INTERLINEADO */
+
+.box-interlineado{
+    font-size: 15px;
+    padding: 10px;
+    color: var(--letra);
+}
+
+.espaciado-de-texto{
+    margin-left: 35px;
+}
+
+.interlineado-de-texto{
+    margin-left: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .div-aside{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .box-aside{
+        width: 100%;        
+    }
+
+    .box-texto {
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+
+    .title-texto{
+        margin-bottom: 0px;
+    }
+
+    .container-global{
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .div-container{
+        width: 80%;
+    }
+
+    .imagen-meme{
+        width: 100%;
+    }
+
+    .button-gral{
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .button-claro{
+        border: none;
+    }
+    
+    .button-descargar{
+        margin-left: 25%;
+    }
+
+    
+.button-image, .button-text, .button-nocturno, .button-claro{
+    margin-left: 5px;
+    
+}
+
+    .button-gral{
+        justify-content: center;
+    }
+
+    #icon-cruz{
+        display: block;
+    }
+     
+}
+
+
