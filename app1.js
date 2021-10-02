@@ -1,4 +1,5 @@
 //LLAMANDO DEL DOM EL MAIN CONTAINER
+// no dejes espacio entre getElementById y el parentesis
 const btnImagen = document.getElementById ('btn-imagen');
 const solapaImagen= document.getElementById ('solapa-imagen');
 const btnTexto = document.getElementById ('btn-texto');
@@ -29,18 +30,20 @@ const cambiarModoClaro = () =>{
     document.body.classList.add('cambiar-modo-claro');
 };
 
+// se mas prolija en javascript, deja los espacios correctos. corresponde espacio entre la fecha y la llave
 const cambioModoOscuro = () =>{
     document.body.classList.remove('cambiar-modo-claro');
     document.body.classList.add('cambiar-modo-oscuro');
 }
 
 //URL
-
+// no dejes saltos de linea asi!
 const urlImagen = document.getElementById 
 ('url-img-input'); 
 
 const divUrl = document.getElementById ('imagen-meme');
 
+// va espacio despues de la coma y despues de la llave 
 urlImagen.addEventListener('input',() =>{
     const url = urlImagen.value;
     divUrl.style.backgroundImage = `url('${url}')`; 
@@ -73,6 +76,17 @@ const hue = document.getElementById ('hue');
 const saturado = document.getElementById ('saturado');
 const negativo = document.getElementById ('negativo');
 const restablecerFiltros = document.getElementById ('restablecer-filtros');
+
+// deja saltos de linea en ordenes largas asi el lector no debe hacer un scroll para leer
+// const actualizarFiltros = () => {
+//     divUrl.style.filter = `
+//         brightness(${brillo.value}) opacity(${opacidad.value})
+//         contrast(${contraste.value}%) blur(${desenfoque.value}px)
+//         grayscale(${escalaDeGrises.value}%) sepia(${sepia.value})
+//         hue-rotate(${hue.value}deg) saturate(${saturado.value}%)
+//         invert(${negativo.value})
+//         `;
+// }
 
 const actualizarFiltros = ()=>{
     divUrl.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${escalaDeGrises.value}%) sepia(${sepia.value}) hue-rotate(${hue.value}deg) saturate(${saturado.value}%) invert(${negativo.value})`;
@@ -127,9 +141,11 @@ const checkboxSuperior = document.getElementById('checkbox-superior');
 const checkboxInferior = document.getElementById('checkbox-inferior');
 
 checkboxSuperior.addEventListener ('click',()=>{
+    // deja espacio entre el cierre del parentesis y la llave 
     if (checkboxSuperior.checked){
         pTextoSuperior.style.display = 'none'
         textoSuperior.disabled = true;
+        // deja espacios entre las llaves --- } else {
     }else{
         pTextoSuperior.style.display ='flex'
         textoSuperior.disabled = false;
@@ -196,6 +212,7 @@ const spanBackgroundColor = document.getElementById('span-background-color');
 colorLetra.addEventListener ('input', ()=>{
     pTextoSuperior.style.color = colorLetra.value;
     pTextoInferior.style.color = colorLetra.value;
+    // innecesario hacer interpolacion aca 
     spanColorLetra.textContent = `${colorLetra.value}`;
 })
 
@@ -204,6 +221,7 @@ colorLetra.addEventListener ('input', ()=>{
 backgroundColor.addEventListener('input', ()=>{
     pTextoSuperior.style.backgroundColor = backgroundColor.value;
     pTextoInferior.style.backgroundColor = backgroundColor.value;
+    // innecesario hacer interpolacion aca 
     spanBackgroundColor.textContent = `${backgroundColor.value}`;
 })
 
@@ -256,6 +274,7 @@ contornoOscuro.addEventListener ('click', ()=>{
 const espaciado = document.getElementById ('espaciado');
 
 espaciado.addEventListener('input', ()=>{
+    // mejor usar interpolacion aca 
     pTextoSuperior.style.padding = espaciado.value + 'px';
     pTextoInferior.style.padding = espaciado.value + 'px';
 })

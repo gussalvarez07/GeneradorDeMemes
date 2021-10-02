@@ -1,7 +1,10 @@
 body{
     display: flex;
     margin: 0px;
+    /* innecesario, el body no tiene padding por defecto */
     padding: 0px;
+    /* innecesario. box sizing no se hereda, si se lo queres dar a todos los elementos 
+    tenes que usar el selector universal * */
     box-sizing: border-box;
 }
 
@@ -64,6 +67,8 @@ body{
 }
 
 
+/* si estos tres elementos tienen exactamente los mismos estilos, por que tienen tres clases distintas?
+las clases son reutilizables! no escribas css de más */
 .button-image{
 
     background-color: var(--header);
@@ -126,6 +131,7 @@ body{
 
 /* ESTILOS PESTAÑA IMAGEN */
 .section-image{
+    /* esta mal esta orden, var debe ir una sola vez  */
     background-color: var (var(--section-image));
 }
 
@@ -168,6 +174,7 @@ body{
 .div-aside{
     width: 20%;
     background-color: var(--aside);
+    /* no dejes codigo comentando en una entrega  */
     /* height: 100%; */
 }
 
@@ -431,7 +438,7 @@ body{
         margin-left: 25%;
     }
 
-    
+    /* ojo con el tabulado */
 .button-image, .button-text, .button-nocturno, .button-claro{
     margin-left: 5px;
     
